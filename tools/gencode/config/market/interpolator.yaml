@@ -1,0 +1,6 @@
+
+com.opengamma.strata.market.curve.interpolator.CurveInterpolator:
+  - of
+
+com.opengamma.strata.market.curve.interpolator.CurveExtrapolator:
+  - of

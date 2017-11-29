@@ -1,0 +1,10 @@
+
+com.opengamma.strata.pricer.swap.DiscountingSwapProductPricer:
+  - presentValue:
+      signature: "CurrencyAmount presentValue(ResolvedSwap, Currency, RatesProvider)"
+
+  - presentValueMultiCurrency:
+      method: presentValue
+      signature: "MultiCurrencyAmount presentValue(ResolvedSwap, RatesProvider)"
+
+  - forecastValue

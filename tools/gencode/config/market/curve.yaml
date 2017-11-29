@@ -1,0 +1,69 @@
+
+com.opengamma.strata.market.curve.CurveName:
+  - of
+
+com.opengamma.strata.market.curve.CurveGroupDefinition:
+  - build
+  - of:
+      signature: "CurveGroupDefinition of(CurveGroupName, Collection<CurveGroupEntry>, Collection<CurveDefinition>)"
+
+com.opengamma.strata.market.curve.CurveGroupDefinitionBuilder:
+
+com.opengamma.strata.market.curve.CurveGroupName:
+  - of
+
+com.opengamma.strata.market.curve.CurveGroupEntry:
+  - of:
+      imports:
+        - java.util.Arrays
+        - java.util.Set
+        - java.util.HashSet
+      wrapper: |
+                  CurveGroupEntry of(CurveName curveName, Currency[] discountCurrencies, Index[] indices) {
+                      CurveGroupEntry.Builder builder = CurveGroupEntry.builder();
+                      builder.curveName(curveName);
+                      if (null != discountCurrencies) {
+                          Set<Currency> ccys = new HashSet<Currency>(Arrays.asList(discountCurrencies));
+                          builder.discountCurrencies(ccys);
+                      }
+                      if (null != indices) {
+                          Set<Index> idx = new HashSet<Index>(Arrays.asList(indices));
+                          builder.indices(idx);
+                      }
+                      return builder.build();
+                  }
+
+
+com.opengamma.strata.market.curve.InterpolatedNodalCurveDefinition:
+  - build
+
+com.opengamma.strata.market.curve.node.FixedOvernightSwapCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "FixedOvernightSwapCurveNode of(FixedOvernightSwapTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "FixedOvernightSwapCurveNode of(FixedOvernightSwapTemplate, ObservableId, double)"
+
+com.opengamma.strata.market.curve.node.FixedIborSwapCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "FixedIborSwapCurveNode of(FixedIborSwapTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "FixedIborSwapCurveNode of(FixedIborSwapTemplate, ObservableId, double)"
+
+com.opengamma.strata.market.curve.CurveNodeDate:
+  - of
+
+com.opengamma.strata.market.curve.CurveNodeDateOrder:
+  - of
+
+com.opengamma.strata.market.curve.CurveNodeClashAction:
+  - of

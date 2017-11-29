@@ -1,0 +1,12 @@
+
+com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeries:
+  - of:
+      imports:
+        - java.util.Arrays
+        - com.opengamma.strata.collect.timeseries.LocalDateDoubleTimeSeriesBuilder
+      wrapper: |
+                 LocalDateDoubleTimeSeries of(LocalDate[] dates, Double[] values) {
+                    LocalDateDoubleTimeSeriesBuilder builder = LocalDateDoubleTimeSeries.builder();
+                    builder.putAll(Arrays.asList(dates), Arrays.asList(values));
+                    return builder.build();
+                 }

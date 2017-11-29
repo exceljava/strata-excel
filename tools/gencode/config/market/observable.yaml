@@ -1,0 +1,8 @@
+
+com.opengamma.strata.market.observable.QuoteId:
+  - of:
+      signature: "QuoteId of(StandardId)"
+
+  - ofIdAndFieldName:
+      method: of
+      signature: "QuoteId of(StandardId, FieldName)"

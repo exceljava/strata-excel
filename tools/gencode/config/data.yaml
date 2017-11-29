@@ -1,0 +1,42 @@
+
+com.opengamma.strata.data.ObservableId:
+
+com.opengamma.strata.data.MarketDataId:
+
+com.opengamma.strata.data.FieldName:
+  - of
+
+com.opengamma.strata.data.MarketData:
+  - combinedWith
+  - empty
+  - of:
+      imports:
+        - static java.util.stream.Collectors.toMap;
+        - java.util.stream.IntStream
+        - java.util.Map
+      wrapper: |
+                  MarketData of(LocalDate valuationDate,
+                                ObservableId[] keys, Double[] values,
+                                ObservableId[] tsKeys, LocalDateDoubleTimeSeries[] tsValues) {
+                      if (keys.length != values.length) {{
+                          throw new IllegalArgumentException("Keys and values must be the same length");
+                      }}
+
+                      Map<ObservableId, Double> valuesMap = IntStream
+                              .range(0, keys.length)
+                              .boxed()
+                              .filter(i -> keys[i] != null && values[i] != null)
+                              .collect(toMap(i -> keys[i], i -> values[i]));
+
+                      if (null != tsKeys && null != tsValues) {
+                          Map<ObservableId, LocalDateDoubleTimeSeries> tsValuesMap = IntStream
+                                .range(0, tsKeys.length)
+                                .boxed()
+                                .filter(i -> tsKeys[i] != null && tsValues[i] != null)
+                                .collect(toMap(i -> tsKeys[i], i -> tsValues[i]));
+
+                          return MarketData.of(valuationDate, valuesMap, tsValuesMap);
+                      }
+
+                      return MarketData.of(valuationDate, valuesMap);
+                  }

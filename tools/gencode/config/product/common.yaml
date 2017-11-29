@@ -1,0 +1,6 @@
+
+com.opengamma.strata.product.common.PayReceive:
+  - of
+
+com.opengamma.strata.product.common.BuySell:
+  - of

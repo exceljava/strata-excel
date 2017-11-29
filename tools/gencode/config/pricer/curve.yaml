@@ -1,0 +1,7 @@
+
+com.opengamma.strata.pricer.curve.CurveCalibrator:
+  - standard
+  - of:
+      signature: "CurveCalibrator of(double, double, int)"
+  - calibrate:
+      signature: ImmutableRatesProvider calibrate(CurveGroupDefinition, MarketData, ReferenceData)

@@ -1,0 +1,6 @@
+
+com.opengamma.strata.product.deposit.TermDeposit:
+  - build
+  - resolve
+
+com.opengamma.strata.product.deposit.ResolvedTermDeposit:
