@@ -81,9 +81,9 @@ class BuilderMethodBuilder(MethodBuilderBase):
         """)
 
         self.imports.update({
-            "com.jinx.ExcelFunction",
-            "com.jinx.ExcelArgument",
-            "com.jinx.ExcelArguments",
+            "com.exceljava.jinx.ExcelFunction",
+            "com.exceljava.jinx.ExcelArgument",
+            "com.exceljava.jinx.ExcelArguments",
             "static java.util.stream.Collectors.toMap",
             "java.util.HashSet",
             "java.util.Map",

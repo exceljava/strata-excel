@@ -16,9 +16,9 @@ class MethodBuilder(MethodBuilderBase):
 
     def build(self, all_classes):
         self.imports.update({
-            "com.jinx.ExcelFunction",
-            "com.jinx.ExcelArguments",
-            "com.jinx.ExcelArgument"
+            "com.exceljava.jinx.ExcelFunction",
+            "com.exceljava.jinx.ExcelArguments",
+            "com.exceljava.jinx.ExcelArgument"
         })
 
         self.imports.update(self.cls.imports)

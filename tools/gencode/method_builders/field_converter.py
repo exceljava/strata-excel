@@ -15,7 +15,7 @@ class FieldConverterMethodBuilder(MethodBuilderBase):
         return self._method_str
 
     def build(self, all_classes):
-        self.imports.add("com.jinx.ExcelArgumentConverter")
+        self.imports.add("com.exceljava.jinx.ExcelArgumentConverter")
 
         cls_type = str(self.cls.type)
         fields = []

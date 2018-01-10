@@ -9,7 +9,7 @@ def get_wrapper_class_name(class_name):
     components = class_name.split(".")
     if tuple(components[:3]) != ("com", "opengamma", "strata"):
         raise Exception(f"{class_name} doesn't look like a Strata class")
-    return "com.jinx.strataexcel." + ".".join(components[3:]) + "XL";
+    return "com.exceljava.strataexcel." + ".".join(components[3:]) + "XL";
 
 
 def _get_excel_function_name(cls, method_name):
@@ -82,7 +82,7 @@ def build_wrapper_class(wrapper_class_name, strata_class, config, all_classes):
     """
     # build all the methods first and get the imports needed
     imports = {
-        "com.jinx.ExcelAddIn"
+        "com.exceljava.jinx.ExcelAddIn"
     }
 
     # class methods in the config can be a list of class names, or a dictionary

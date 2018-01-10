@@ -22,7 +22,7 @@ class ArgConverterBuilder(StaticMethodBuilder):
         super().build(all_classes)
 
         # and add the ExcelArgumentConverter annotation
-        self.imports.add("com.jinx.ExcelArgumentConverter")
+        self.imports.add("com.exceljava.jinx.ExcelArgumentConverter")
         self._method_str = """
     @ExcelArgumentConverter""" + self._method_str
         return self
