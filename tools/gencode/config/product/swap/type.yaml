@@ -1,0 +1,62 @@
+
+com.opengamma.strata.product.swap.type.FixedIborSwapConvention:
+  - of
+
+com.opengamma.strata.product.swap.type.FixedIborSwapTemplate:
+  - build
+  - of:
+      signature: "FixedIborSwapTemplate of(Tenor, FixedIborSwapConvention)"
+
+com.opengamma.strata.product.swap.type.FixedInflationSwapConvention:
+  - of
+
+com.opengamma.strata.product.swap.type.FixedInflationSwapTemplate:
+  - build
+  - of:
+      signature: "FixedInflationSwapTemplate of(Tenor, FixedInflationSwapConvention)"
+
+com.opengamma.strata.product.swap.type.FixedOvernightSwapConvention:
+  - of
+
+com.opengamma.strata.product.swap.type.FixedOvernightSwapTemplate:
+  - build
+  - of:
+      signature: "FixedOvernightSwapTemplate of(Tenor, FixedOvernightSwapConvention)"
+
+com.opengamma.strata.product.swap.type.FixedRateSwapLegConvention:
+  - of
+
+com.opengamma.strata.product.swap.type.IborIborSwapConvention:
+  - of
+
+com.opengamma.strata.product.swap.type.IborIborSwapTemplate:
+  - build
+  - of:
+      signature: "IborIborSwapTemplate of(Tenor, IborIborSwapConvention)"
+
+com.opengamma.strata.product.swap.type.InflationRateSwapLegConvention:
+  - build
+
+com.opengamma.strata.product.swap.type.OvernightIborSwapConvention:
+  - of
+
+com.opengamma.strata.product.swap.type.OvernightIborSwapTemplate:
+  - build
+  - of:
+      signature: "OvernightIborSwapTemplate of(Tenor, OvernightIborSwapConvention)"
+
+com.opengamma.strata.product.swap.type.ThreeLegBasisSwapConvention:
+  - of
+
+com.opengamma.strata.product.swap.type.ThreeLegBasisSwapTemplate:
+  - build
+  - of:
+      signature: "ThreeLegBasisSwapTemplate of(Tenor, ThreeLegBasisSwapConvention)"
+
+com.opengamma.strata.product.swap.type.XCcyIborIborSwapConvention:
+  - of
+
+com.opengamma.strata.product.swap.type.XCcyIborIborSwapTemplate:
+  - build
+  - of:
+      signature: "XCcyIborIborSwapTemplate of(Tenor, XCcyIborIborSwapConvention)"

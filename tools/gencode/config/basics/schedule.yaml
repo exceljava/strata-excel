@@ -1,0 +1,16 @@
+
+com.opengamma.strata.basics.schedule.PeriodicSchedule:
+  - build
+
+com.opengamma.strata.basics.schedule.Frequency:
+  - parse
+  - ofDays
+  - ofWeeks
+  - ofMonths
+  - ofYears
+
+com.opengamma.strata.basics.schedule.StubConvention:
+  - of
+
+com.opengamma.strata.basics.schedule.RollConvention:
+  - of

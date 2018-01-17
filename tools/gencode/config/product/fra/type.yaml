@@ -1,0 +1,18 @@
+
+com.opengamma.strata.product.fra.type.FraConvention:
+  - of:
+      signature: "FraConvention of(String)"
+
+  - ofIndex:
+      method: of
+      signature: "FraConvention of(IborIndex)"
+
+com.opengamma.strata.product.fra.type.FraTemplate:
+  - build
+
+  - of:
+      signature: "FraTemplate of(Period, Period, FraConvention)"
+
+  - ofIndex:
+     method: of
+     signature: "FraTemplate of(Period, IborIndex)"

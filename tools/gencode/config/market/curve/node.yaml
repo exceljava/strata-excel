@@ -1,0 +1,122 @@
+# CdsIndexIsdaCreditCurveNode
+# CdsIsdaCreditCurveNode
+
+com.opengamma.strata.market.curve.node.FixedIborSwapCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "FixedIborSwapCurveNode of(FixedIborSwapTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "FixedIborSwapCurveNode of(FixedIborSwapTemplate, ObservableId, double)"
+
+com.opengamma.strata.market.curve.node.FixedInflationSwapCurveNode:
+
+
+com.opengamma.strata.market.curve.node.FixedOvernightSwapCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "FixedOvernightSwapCurveNode of(FixedOvernightSwapTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "FixedOvernightSwapCurveNode of(FixedOvernightSwapTemplate, ObservableId, double)"
+
+com.opengamma.strata.market.curve.node.FraCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "FraCurveNode of(FraTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "FraCurveNode of(FraTemplate, ObservableId, double)"
+
+com.opengamma.strata.market.curve.node.FxSwapCurveNode:
+  - build
+
+  - of:
+      method: of
+      signature: "FxSwapCurveNode of(FxSwapTemplate, ObservableId)"
+
+com.opengamma.strata.market.curve.node.IborFixingDepositCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "IborFixingDepositCurveNode of(IborFixingDepositTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "IborFixingDepositCurveNode of(IborFixingDepositTemplate, ObservableId, double)"
+
+com.opengamma.strata.market.curve.node.IborFutureCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "IborFutureCurveNode of(IborFutureTemplate, QuoteId)"
+
+  - ofSpread:
+      method: of
+      signature: "IborFutureCurveNode of(IborFutureTemplate, QuoteId, double)"
+
+com.opengamma.strata.market.curve.node.IborIborSwapCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "IborIborSwapCurveNode of(IborIborSwapTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "IborIborSwapCurveNode of(IborIborSwapTemplate, ObservableId, double)"
+
+com.opengamma.strata.market.curve.node.OvernightIborSwapCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "OvernightIborSwapCurveNode of(OvernightIborSwapTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "OvernightIborSwapCurveNode of(OvernightIborSwapTemplate, ObservableId, double)"
+
+com.opengamma.strata.market.curve.node.TermDepositCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "TermDepositCurveNode of(TermDepositTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "TermDepositCurveNode of(TermDepositTemplate, ObservableId, double)"
+
+com.opengamma.strata.market.curve.node.ThreeLegBasisSwapCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "ThreeLegBasisSwapCurveNode of(ThreeLegBasisSwapTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "ThreeLegBasisSwapCurveNode of(ThreeLegBasisSwapTemplate, ObservableId, double)"
+
+com.opengamma.strata.market.curve.node.XCcyIborIborSwapCurveNode:
+  - build
+
+  - ofRate:
+      method: of
+      signature: "XCcyIborIborSwapCurveNode of(XCcyIborIborSwapTemplate, ObservableId)"
+
+  - ofSpread:
+      method: of
+      signature: "XCcyIborIborSwapCurveNode of(XCcyIborIborSwapTemplate, ObservableId, double)"

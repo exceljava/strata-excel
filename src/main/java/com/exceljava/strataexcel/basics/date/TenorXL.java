@@ -14,6 +14,7 @@ import com.exceljava.jinx.ExcelArgumentConverter;
 import com.exceljava.jinx.ExcelArguments;
 import com.exceljava.jinx.ExcelFunction;
 import com.opengamma.strata.basics.date.Tenor;
+import java.time.Period;
     
 
 public class TenorXL {
@@ -392,6 +393,19 @@ public class TenorXL {
         return Tenor.TENOR_9Y;
     }
     
+    @ExcelArgumentConverter
+    @ExcelFunction(
+        value = "og.Tenor.getPeriod",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    @ExcelArguments({
+        @ExcelArgument("tenor")
+    })
+    public Period getPeriod(Tenor tenor) {
+        return tenor.getPeriod();
+    }
+
     @ExcelArgumentConverter
     @ExcelFunction(
         value = "og.Tenor.parse",

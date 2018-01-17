@@ -1,20 +1,4 @@
 
-com.opengamma.strata.product.swap.type.FixedOvernightSwapConvention:
-  - of
-
-com.opengamma.strata.product.swap.type.FixedOvernightSwapTemplate:
-  - build
-  - of:
-      signature: "FixedOvernightSwapTemplate of(Tenor, FixedOvernightSwapConvention)"
-
-com.opengamma.strata.product.swap.type.FixedIborSwapConvention:
-  - of
-
-com.opengamma.strata.product.swap.type.FixedIborSwapTemplate:
-  - build
-  - of:
-      signature: "FixedIborSwapTemplate of(Tenor, FixedIborSwapConvention)"
-
 com.opengamma.strata.product.swap.PaymentRelativeTo:
   - of
 
@@ -46,6 +30,9 @@ com.opengamma.strata.product.swap.FxResetCalculation:
   - build
 
 com.opengamma.strata.product.swap.FxResetFixingRelativeTo:
+  - of
+
+com.opengamma.strata.product.swap.PriceIndexCalculationMethod:
   - of
 
 com.opengamma.strata.product.swap.RateCalculationSwapLeg:

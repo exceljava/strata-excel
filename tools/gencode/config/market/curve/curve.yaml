@@ -33,31 +33,8 @@ com.opengamma.strata.market.curve.CurveGroupEntry:
                       return builder.build();
                   }
 
-
 com.opengamma.strata.market.curve.InterpolatedNodalCurveDefinition:
   - build
-
-com.opengamma.strata.market.curve.node.FixedOvernightSwapCurveNode:
-  - build
-
-  - ofRate:
-      method: of
-      signature: "FixedOvernightSwapCurveNode of(FixedOvernightSwapTemplate, ObservableId)"
-
-  - ofSpread:
-      method: of
-      signature: "FixedOvernightSwapCurveNode of(FixedOvernightSwapTemplate, ObservableId, double)"
-
-com.opengamma.strata.market.curve.node.FixedIborSwapCurveNode:
-  - build
-
-  - ofRate:
-      method: of
-      signature: "FixedIborSwapCurveNode of(FixedIborSwapTemplate, ObservableId)"
-
-  - ofSpread:
-      method: of
-      signature: "FixedIborSwapCurveNode of(FixedIborSwapTemplate, ObservableId, double)"
 
 com.opengamma.strata.market.curve.CurveNodeDate:
   - of

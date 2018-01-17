@@ -1,0 +1,21 @@
+
+com.opengamma.strata.basics.currency.Currency:
+  - of
+
+com.opengamma.strata.basics.currency.CurrencyAmount:
+  - parse
+  - getCurrency
+  - getAmount
+  - of:
+      signature: "CurrencyAmount of(Currency, double)"
+  - zero:
+      type: static
+
+com.opengamma.strata.basics.currency.FxRate:
+  - of:
+      signature: "FxRate of(Currency, Currency, double)"
+
+com.opengamma.strata.basics.currency.MultiCurrencyAmount:
+  - getAmountOrZero
+  - of:
+      signature: "MultiCurrencyAmount of(Iterable<CurrencyAmount>)"

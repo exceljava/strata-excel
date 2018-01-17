@@ -1,0 +1,10 @@
+
+com.opengamma.strata.basics.StandardId:
+  - parse
+  - of
+
+com.opengamma.strata.basics.ReferenceData:
+  - standard
+  - minimal
+  - empty
+  - combinedWith

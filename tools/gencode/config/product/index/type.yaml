@@ -1,0 +1,12 @@
+
+com.opengamma.strata.product.index.type.IborFutureConvention:
+  - of
+
+com.opengamma.strata.product.index.type.IborFutureTemplate:
+  - relative:
+      method: of
+      signature: "IborFutureTemplate of(Period, int, IborFutureConvention)"
+
+  - absolute:
+      method: of
+      signature: "IborFutureTemplate of(YearMonth, IborFutureConvention)"

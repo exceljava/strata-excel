@@ -1,0 +1,34 @@
+
+com.opengamma.strata.basics.value.ValueSchedule:
+  - ofSteps:
+      method: of
+      signature: "ValueSchedule of(double, List<ValueStep>)"
+
+  - ofSequence:
+      method: of
+      signature: "ValueSchedule of(double, ValueStepSequence)"
+
+  - fixed:
+      method: of
+      signature: "ValueSchedule of(double)"
+      type: arg_converter
+
+com.opengamma.strata.basics.value.ValueAdjustment:
+  - ofReplace
+  - ofDeltaAmount
+  - ofDeltaMultiplier
+  - ofMultiplier
+  - adjust
+
+com.opengamma.strata.basics.value.ValueStep:
+  - atPeriod:
+      method: of
+      signature: "ValueStep of(int, ValueAdjustment)"
+
+  - atDate:
+      method: of
+      signature: "ValueStep of(LocalDate, ValueAdjustment)"
+
+com.opengamma.strata.basics.value.ValueStepSequence:
+  - of
+

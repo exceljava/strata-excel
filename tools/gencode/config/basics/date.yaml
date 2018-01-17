@@ -1,0 +1,39 @@
+
+com.opengamma.strata.basics.date.BusinessDayConvention:
+  - of
+
+com.opengamma.strata.basics.date.BusinessDayAdjustment:
+  - of
+  - adjust
+  - build
+
+com.opengamma.strata.basics.date.HolidayCalendarId:
+  - of
+  - combinedWith
+
+com.opengamma.strata.basics.date.AdjustableDate:
+  - ofDate:
+      method: of
+      signature: "AdjustableDate of(LocalDate)"
+      type: arg_converter
+
+  - ofDateAndAdjustment:
+      method: of
+      signature: "AdjustableDate of(LocalDate, BusinessDayAdjustment)"
+
+com.opengamma.strata.basics.date.DaysAdjustment:
+  - build
+
+  - ofCalendarDays:
+      signature: "DaysAdjustment ofCalendarDays(int, BusinessDayAdjustment)"
+
+  - ofBusinessDays:
+      signature: "DaysAdjustment ofBusinessDays(int, HolidayCalendarId, BusinessDayAdjustment)"
+
+com.opengamma.strata.basics.date.Tenor:
+  - parse
+  - getPeriod:
+      type: arg_converter
+
+com.opengamma.strata.basics.date.DayCount:
+  - of

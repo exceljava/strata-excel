@@ -1,10 +1,15 @@
 
-com.opengamma.strata.data.ObservableId:
-
 com.opengamma.strata.data.MarketDataId:
 
 com.opengamma.strata.data.FieldName:
   - of
+
+com.opengamma.strata.data.FxMatrixId:
+  - of
+
+com.opengamma.strata.data.FxRateId:
+  - of:
+      signature: "FxRateId of(Currency, Currency)"
 
 com.opengamma.strata.data.MarketData:
   - combinedWith
@@ -40,3 +45,8 @@ com.opengamma.strata.data.MarketData:
 
                       return MarketData.of(valuationDate, valuesMap);
                   }
+
+com.opengamma.strata.data.ObservableId:
+
+com.opengamma.strata.data.ObservableSource:
+  - of

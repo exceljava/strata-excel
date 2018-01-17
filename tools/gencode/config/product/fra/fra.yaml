@@ -1,0 +1,9 @@
+
+com.opengamma.strata.product.fra.FraDiscountingMethod:
+  - of
+
+com.opengamma.strata.product.fra.Fra:
+  - build
+  - resolve
+
+com.opengamma.strata.product.fra.ResolvedFra:

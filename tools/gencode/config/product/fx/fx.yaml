@@ -1,0 +1,22 @@
+
+com.opengamma.strata.product.fx.FxNdf:
+  - build
+  - resolve
+
+com.opengamma.strata.product.fx.FxSingle:
+  - of:
+      signature: "FxSingle of(CurrencyAmount, CurrencyAmount, LocalDate)"
+
+  - resolve
+
+com.opengamma.strata.product.fx.FxSwap:
+  - ofForwardPoints:
+      signature: "FxSwap ofForwardPoints(CurrencyAmount, FxRate, double, LocalDate, LocalDate)"
+
+  - resolve
+
+com.opengamma.strata.product.fx.ResolvedFxNdf:
+
+com.opengamma.strata.product.fx.ResolvedFxSingle:
+
+com.opengamma.strata.product.fx.ResolvedFxSwap:

@@ -1,0 +1,25 @@
+
+com.opengamma.strata.product.deposit.type.IborFixingDepositConvention:
+  - of:
+      signature: "IborFixingDepositConvention of(String)"
+
+  - ofIndex:
+      method: of
+      signature: "IborFixingDepositConvention of(IborIndex)"
+
+com.opengamma.strata.product.deposit.type.IborFixingDepositTemplate:
+  - build
+  - of:
+      signature: "IborFixingDepositTemplate of(IborIndex)"
+
+  - ofPeriod:
+      method: of
+      signature: "IborFixingDepositTemplate of(Period, IborFixingDepositConvention)"
+
+com.opengamma.strata.product.deposit.type.TermDepositConvention:
+  - of
+
+com.opengamma.strata.product.deposit.type.TermDepositTemplate:
+  - build
+  - of:
+      signature: "TermDepositTemplate of(Period, TermDepositConvention)"

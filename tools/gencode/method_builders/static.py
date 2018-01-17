@@ -11,10 +11,10 @@ class StaticMethodBuilder(MethodBuilderBase):
         super().__init__(cls, method, xlname)
         if not method.is_static:
             raise RuntimeError(f"{cls.name}.{method} is not static")
-        self._method_str = None
+        self.__method_str = None
 
     def __str__(self):
-        return self._method_str
+        return self.__method_str
 
     def build(self, all_classes):
         self.imports.update({
@@ -62,6 +62,6 @@ class StaticMethodBuilder(MethodBuilderBase):
     }}
 """
 
-        self._method_str = method_str
+        self.__method_str = method_str
         return self
 
