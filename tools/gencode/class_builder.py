@@ -9,7 +9,7 @@ def get_wrapper_class_name(class_name):
     components = class_name.split(".")
     if tuple(components[:3]) != ("com", "opengamma", "strata"):
         raise Exception(f"{class_name} doesn't look like a Strata class")
-    return "com.exceljava.strataexcel." + ".".join(components[3:]) + "XL";
+    return "com.exceljava.strataexcel.generated." + ".".join(components[3:]) + "XL";
 
 
 def _get_excel_function_name(cls, method_name):
@@ -138,18 +138,6 @@ def build_wrapper_class(wrapper_class_name, strata_class, config, all_classes):
     and any(is_cls_field(f) for f in strata_class.fields):
         xlname = _get_excel_function_name(strata_class, "get")
         builder = get_method_builder("field_converter", strata_class, None, xlname)
-        builder = builder.build(all_classes)
-        imports.update(builder.imports)
-        method_builders[builder.xlname] = builder
-
-    # add the toString method if there is one
-    to_string = _get_excel_function_name(strata_class, "toString")
-    if to_string not in method_builders and "toString" in strata_class.methods:
-        builder = _get_method_builder(strata_class,
-                                      xlname="toString",
-                                      type="method",
-                                      signature="String toString()")
-
         builder = builder.build(all_classes)
         imports.update(builder.imports)
         method_builders[builder.xlname] = builder

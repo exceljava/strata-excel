@@ -2,6 +2,8 @@
 com.opengamma.strata.basics.StandardId:
   - parse
   - of
+  - toString:
+      type: return_converter
 
 com.opengamma.strata.basics.ReferenceData:
   - standard

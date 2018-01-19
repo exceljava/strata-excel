@@ -164,6 +164,7 @@ def _get_class_info(source_path, class_text):
                 break
 
         cls = JavaClass(source_path, pos, name, package, methods, fields)
+
         classes[str(cls.type)] = cls
 
     return classes

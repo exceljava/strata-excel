@@ -7,6 +7,8 @@ com.opengamma.strata.product.swap.PaymentSchedule:
 
 com.opengamma.strata.product.swap.CompoundingMethod:
   - of
+  - toString:
+      type: return_converter
 
 com.opengamma.strata.product.swap.NotionalSchedule:
   - build
@@ -46,3 +48,7 @@ com.opengamma.strata.product.swap.Swap:
 
 com.opengamma.strata.product.swap.ResolvedSwap:
 
+com.opengamma.strata.product.swap.SwapLegType:
+  - of
+  - toString:
+      type: return_converter

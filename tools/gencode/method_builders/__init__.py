@@ -38,6 +38,7 @@ Wrapper methods:
 from .builder import BuilderMethodBuilder
 from .method import MethodBuilder
 from .arg_converter import ArgConverterBuilder
+from .return_converter import ReturnConverterBuilder
 from .static import StaticMethodBuilder
 from .field import FieldMethodBuilder
 from .field_converter import FieldConverterMethodBuilder
@@ -46,6 +47,7 @@ from .wrapper import WrapperMethodBuilder
 _builder_classes = {
     "wrapper": WrapperMethodBuilder,
     "arg_converter": ArgConverterBuilder,
+    "return_converter": ReturnConverterBuilder,
     "field_converter": FieldConverterMethodBuilder,
     "builder": BuilderMethodBuilder,
     "method": MethodBuilder,

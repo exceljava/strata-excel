@@ -1,0 +1,31 @@
+
+com.opengamma.strata.market.sensitivity.PointSensitivity:
+  - getCurrency
+  - getSensitivity
+  - withCurrency
+  - withSensitivity
+  - compareKey
+  - convertedTo
+
+com.opengamma.strata.market.sensitivity.PointSensitivities:
+  - empty
+  - of:
+      signature: "PointSensitivities of(List<PointSensitivity>)"
+  - size
+  - combinedWith
+  - multipliedBy
+  - normalized
+  - equalWithTolerance
+  - convertedTo
+  - getSensitivities
+
+com.opengamma.strata.market.sensitivity.PointSensitivityBuilder:
+  - none
+  - of:
+      signature: "PointSensitivityBuilder of(List<PointSensitivity>)"
+  - withCurrency
+  - multipliedBy
+  - normalize
+  - combinedWith
+  - build
+  - cloned

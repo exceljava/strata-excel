@@ -11,6 +11,10 @@ com.opengamma.strata.basics.schedule.Frequency:
 
 com.opengamma.strata.basics.schedule.StubConvention:
   - of
+  - toString:
+      type: return_converter
 
 com.opengamma.strata.basics.schedule.RollConvention:
   - of
+  - getName:
+      type: return_converter

@@ -1,6 +1,10 @@
 
 com.opengamma.strata.product.common.PayReceive:
   - of
+  - toString:
+      type: return_converter
 
 com.opengamma.strata.product.common.BuySell:
   - of
+  - toString:
+      type: return_converter

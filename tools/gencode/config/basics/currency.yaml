@@ -1,6 +1,8 @@
 
 com.opengamma.strata.basics.currency.Currency:
   - of
+  - toString:
+      type: return_converter
 
 com.opengamma.strata.basics.currency.CurrencyAmount:
   - parse
@@ -14,6 +16,11 @@ com.opengamma.strata.basics.currency.CurrencyAmount:
 com.opengamma.strata.basics.currency.FxRate:
   - of:
       signature: "FxRate of(Currency, Currency, double)"
+
+com.opengamma.strata.basics.currency.FxRateProvider:
+  - convert
+  - fxRate:
+      signature: "double fxRate(Currency, Currency)"
 
 com.opengamma.strata.basics.currency.MultiCurrencyAmount:
   - getAmountOrZero

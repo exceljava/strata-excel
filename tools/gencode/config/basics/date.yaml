@@ -1,6 +1,8 @@
 
 com.opengamma.strata.basics.date.BusinessDayConvention:
   - of
+  - getName:
+      type: return_converter
 
 com.opengamma.strata.basics.date.BusinessDayAdjustment:
   - of
@@ -34,6 +36,10 @@ com.opengamma.strata.basics.date.Tenor:
   - parse
   - getPeriod:
       type: arg_converter
+  - toString:
+      type: return_converter
 
 com.opengamma.strata.basics.date.DayCount:
   - of
+  - getName:
+      type: return_converter
