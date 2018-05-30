@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/k8dul9mkbyjura1a?svg=true)](https://ci.appveyor.com/project/TonyRoberts/strata-excel)
+
 # Strata-Excel
 
 Strata-Excel provides Excel bindings to OpenGamma's Strata open source analytics and market risk library.
