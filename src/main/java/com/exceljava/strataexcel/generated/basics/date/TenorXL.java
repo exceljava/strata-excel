@@ -53,6 +53,15 @@ public class TenorXL {
     }
     
     @ExcelFunction(
+        value = "og.Tenor.TENOR_11Y",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Tenor TENOR_11Y() {
+        return Tenor.TENOR_11Y;
+    }
+    
+    @ExcelFunction(
         value = "og.Tenor.TENOR_12M",
         category = "Strata",
         isThreadSafe = true
@@ -77,6 +86,33 @@ public class TenorXL {
     )
     public Tenor TENOR_13W() {
         return Tenor.TENOR_13W;
+    }
+    
+    @ExcelFunction(
+        value = "og.Tenor.TENOR_13Y",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Tenor TENOR_13Y() {
+        return Tenor.TENOR_13Y;
+    }
+    
+    @ExcelFunction(
+        value = "og.Tenor.TENOR_14Y",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Tenor TENOR_14Y() {
+        return Tenor.TENOR_14Y;
+    }
+    
+    @ExcelFunction(
+        value = "og.Tenor.TENOR_15M",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Tenor TENOR_15M() {
+        return Tenor.TENOR_15M;
     }
     
     @ExcelFunction(
@@ -143,6 +179,15 @@ public class TenorXL {
     }
     
     @ExcelFunction(
+        value = "og.Tenor.TENOR_21M",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Tenor TENOR_21M() {
+        return Tenor.TENOR_21M;
+    }
+    
+    @ExcelFunction(
         value = "og.Tenor.TENOR_25Y",
         category = "Strata",
         isThreadSafe = true
@@ -206,6 +251,15 @@ public class TenorXL {
     }
     
     @ExcelFunction(
+        value = "og.Tenor.TENOR_35Y",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Tenor TENOR_35Y() {
+        return Tenor.TENOR_35Y;
+    }
+    
+    @ExcelFunction(
         value = "og.Tenor.TENOR_3D",
         category = "Strata",
         isThreadSafe = true
@@ -248,6 +302,15 @@ public class TenorXL {
     )
     public Tenor TENOR_40Y() {
         return Tenor.TENOR_40Y;
+    }
+    
+    @ExcelFunction(
+        value = "og.Tenor.TENOR_45Y",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Tenor TENOR_45Y() {
+        return Tenor.TENOR_45Y;
     }
     
     @ExcelFunction(

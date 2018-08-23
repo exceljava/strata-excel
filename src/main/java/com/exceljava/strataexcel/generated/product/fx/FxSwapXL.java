@@ -35,12 +35,12 @@ public class FxSwapXL {
     @ExcelArguments({
         @ExcelArgument("amount"),
         @ExcelArgument("nearRate"),
-        @ExcelArgument("forwardPoints"),
+        @ExcelArgument("decimalForwardPoints"),
         @ExcelArgument("nearDate"),
         @ExcelArgument("farDate")
     })
-    public FxSwap ofForwardPoints(CurrencyAmount amount, FxRate nearRate, double forwardPoints, LocalDate nearDate, LocalDate farDate) {
-        return FxSwap.ofForwardPoints(amount, nearRate, forwardPoints, nearDate, farDate);
+    public FxSwap ofForwardPoints(CurrencyAmount amount, FxRate nearRate, double decimalForwardPoints, LocalDate nearDate, LocalDate farDate) {
+        return FxSwap.ofForwardPoints(amount, nearRate, decimalForwardPoints, nearDate, farDate);
     }
 
     @ExcelFunction(

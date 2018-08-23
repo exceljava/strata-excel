@@ -11,10 +11,10 @@ package com.exceljava.strataexcel.generated.market.curve;
 import com.exceljava.jinx.ExcelAddIn;
     
 
-public class CurveGroupDefinitionBuilderXL {
+public class RatesCurveGroupDefinitionBuilderXL {
     private final ExcelAddIn xl;
 
-    public CurveGroupDefinitionBuilderXL(ExcelAddIn xl) {
+    public RatesCurveGroupDefinitionBuilderXL(ExcelAddIn xl) {
         this.xl = xl;
     }
 }

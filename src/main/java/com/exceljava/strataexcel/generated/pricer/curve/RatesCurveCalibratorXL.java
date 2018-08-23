@@ -14,35 +14,35 @@ import com.exceljava.jinx.ExcelArguments;
 import com.exceljava.jinx.ExcelFunction;
 import com.opengamma.strata.basics.ReferenceData;
 import com.opengamma.strata.data.MarketData;
-import com.opengamma.strata.market.curve.CurveGroupDefinition;
-import com.opengamma.strata.pricer.curve.CurveCalibrator;
+import com.opengamma.strata.market.curve.RatesCurveGroupDefinition;
+import com.opengamma.strata.pricer.curve.RatesCurveCalibrator;
 import com.opengamma.strata.pricer.rate.ImmutableRatesProvider;
     
 
-public class CurveCalibratorXL {
+public class RatesCurveCalibratorXL {
     private final ExcelAddIn xl;
 
-    public CurveCalibratorXL(ExcelAddIn xl) {
+    public RatesCurveCalibratorXL(ExcelAddIn xl) {
         this.xl = xl;
     }
     
     @ExcelFunction(
-        value = "og.CurveCalibrator.calibrate",
+        value = "og.RatesCurveCalibrator.calibrate",
         category = "Strata",
         isThreadSafe = true
     )
     @ExcelArguments({
-        @ExcelArgument("curveCalibrator"),
+        @ExcelArgument("ratesCurveCalibrator"),
         @ExcelArgument("curveGroupDefn"),
         @ExcelArgument("marketData"),
         @ExcelArgument("refData")
     })
-    public ImmutableRatesProvider calibrate(CurveCalibrator curveCalibrator, CurveGroupDefinition curveGroupDefn, MarketData marketData, ReferenceData refData) {
-        return curveCalibrator.calibrate(curveGroupDefn, marketData, refData);
+    public ImmutableRatesProvider calibrate(RatesCurveCalibrator ratesCurveCalibrator, RatesCurveGroupDefinition curveGroupDefn, MarketData marketData, ReferenceData refData) {
+        return ratesCurveCalibrator.calibrate(curveGroupDefn, marketData, refData);
     }
 
     @ExcelFunction(
-        value = "og.CurveCalibrator.of",
+        value = "og.RatesCurveCalibrator.of",
         category = "Strata",
         isThreadSafe = true
     )
@@ -51,16 +51,16 @@ public class CurveCalibratorXL {
         @ExcelArgument("toleranceRel"),
         @ExcelArgument("stepMaximum")
     })
-    public CurveCalibrator of(double toleranceAbs, double toleranceRel, int stepMaximum) {
-        return CurveCalibrator.of(toleranceAbs, toleranceRel, stepMaximum);
+    public RatesCurveCalibrator of(double toleranceAbs, double toleranceRel, int stepMaximum) {
+        return RatesCurveCalibrator.of(toleranceAbs, toleranceRel, stepMaximum);
     }
 
     @ExcelFunction(
-        value = "og.CurveCalibrator.standard",
+        value = "og.RatesCurveCalibrator.standard",
         category = "Strata",
         isThreadSafe = true
     )
-    public CurveCalibrator standard() {
-        return CurveCalibrator.standard();
+    public RatesCurveCalibrator standard() {
+        return RatesCurveCalibrator.standard();
     }
 }

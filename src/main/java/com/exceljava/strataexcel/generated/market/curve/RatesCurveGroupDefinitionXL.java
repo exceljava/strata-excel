@@ -13,10 +13,10 @@ import com.exceljava.jinx.ExcelArgument;
 import com.exceljava.jinx.ExcelArguments;
 import com.exceljava.jinx.ExcelFunction;
 import com.opengamma.strata.market.curve.CurveDefinition;
-import com.opengamma.strata.market.curve.CurveGroupDefinition;
-import com.opengamma.strata.market.curve.CurveGroupDefinitionBuilder;
-import com.opengamma.strata.market.curve.CurveGroupEntry;
 import com.opengamma.strata.market.curve.CurveGroupName;
+import com.opengamma.strata.market.curve.RatesCurveGroupDefinition;
+import com.opengamma.strata.market.curve.RatesCurveGroupDefinitionBuilder;
+import com.opengamma.strata.market.curve.RatesCurveGroupEntry;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
@@ -26,15 +26,15 @@ import java.util.stream.IntStream;
 import static java.util.stream.Collectors.toMap;
     
 
-public class CurveGroupDefinitionXL {
+public class RatesCurveGroupDefinitionXL {
     private final ExcelAddIn xl;
 
-    public CurveGroupDefinitionXL(ExcelAddIn xl) {
+    public RatesCurveGroupDefinitionXL(ExcelAddIn xl) {
         this.xl = xl;
     }
     
     @ExcelFunction(
-        value = "og.CurveGroupDefinition.build",
+        value = "og.RatesCurveGroupDefinition.build",
         category = "Strata",
         isThreadSafe = true
     )
@@ -42,7 +42,7 @@ public class CurveGroupDefinitionXL {
         @ExcelArgument("keys"),
         @ExcelArgument("values")
     })
-    public CurveGroupDefinition builder(String[] keys, Object[] values) {
+    public RatesCurveGroupDefinition builder(String[] keys, Object[] values) {
         if (keys.length != values.length) {
             throw new IllegalArgumentException("Keys and values must be the same length");
         }
@@ -54,7 +54,7 @@ public class CurveGroupDefinitionXL {
                 .collect(toMap(i -> keys[i].toLowerCase(), i -> values[i]));
 
         Set<String> usedArgs = new HashSet<String>();
-        CurveGroupDefinitionBuilder builder = CurveGroupDefinition.builder();
+        RatesCurveGroupDefinitionBuilder builder = RatesCurveGroupDefinition.builder();
         
         Object name = args.get("name");
         if (null != name) {
@@ -96,7 +96,7 @@ public class CurveGroupDefinitionXL {
     }
         
     @ExcelFunction(
-        value = "og.CurveGroupDefinition.of",
+        value = "og.RatesCurveGroupDefinition.of",
         category = "Strata",
         isThreadSafe = true
     )
@@ -105,9 +105,9 @@ public class CurveGroupDefinitionXL {
         @ExcelArgument("entries"),
         @ExcelArgument("curveDefinitions")
     })
-    public CurveGroupDefinition of(CurveGroupName name, CurveGroupEntry[] entries, CurveDefinition[] curveDefinitions) {
-        Collection<CurveGroupEntry> entries_Collection = Arrays.asList(entries);
+    public RatesCurveGroupDefinition of(CurveGroupName name, RatesCurveGroupEntry[] entries, CurveDefinition[] curveDefinitions) {
+        Collection<RatesCurveGroupEntry> entries_Collection = Arrays.asList(entries);
         Collection<CurveDefinition> curveDefinitions_Collection = Arrays.asList(curveDefinitions);
-        return CurveGroupDefinition.of(name, entries_Collection, curveDefinitions_Collection);
+        return RatesCurveGroupDefinition.of(name, entries_Collection, curveDefinitions_Collection);
     }
 }

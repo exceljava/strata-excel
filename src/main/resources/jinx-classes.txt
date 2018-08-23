@@ -36,9 +36,6 @@ com.exceljava.strataexcel.generated.data.MarketDataXL
 com.exceljava.strataexcel.generated.data.ObservableIdXL
 com.exceljava.strataexcel.generated.data.ObservableSourceXL
 com.exceljava.strataexcel.generated.market.ValueTypeXL
-com.exceljava.strataexcel.generated.market.curve.CurveGroupDefinitionBuilderXL
-com.exceljava.strataexcel.generated.market.curve.CurveGroupDefinitionXL
-com.exceljava.strataexcel.generated.market.curve.CurveGroupEntryXL
 com.exceljava.strataexcel.generated.market.curve.CurveGroupNameXL
 com.exceljava.strataexcel.generated.market.curve.CurveNameXL
 com.exceljava.strataexcel.generated.market.curve.CurveNodeClashActionXL
@@ -46,6 +43,9 @@ com.exceljava.strataexcel.generated.market.curve.CurveNodeDateOrderXL
 com.exceljava.strataexcel.generated.market.curve.CurveNodeDateXL
 com.exceljava.strataexcel.generated.market.curve.CurveNodeXL
 com.exceljava.strataexcel.generated.market.curve.InterpolatedNodalCurveDefinitionXL
+com.exceljava.strataexcel.generated.market.curve.RatesCurveGroupDefinitionBuilderXL
+com.exceljava.strataexcel.generated.market.curve.RatesCurveGroupDefinitionXL
+com.exceljava.strataexcel.generated.market.curve.RatesCurveGroupEntryXL
 com.exceljava.strataexcel.generated.market.curve.interpolator.CurveExtrapolatorXL
 com.exceljava.strataexcel.generated.market.curve.interpolator.CurveInterpolatorXL
 com.exceljava.strataexcel.generated.market.curve.node.FixedIborSwapCurveNodeXL
@@ -65,7 +65,7 @@ com.exceljava.strataexcel.generated.market.observable.QuoteIdXL
 com.exceljava.strataexcel.generated.market.sensitivity.PointSensitivitiesXL
 com.exceljava.strataexcel.generated.market.sensitivity.PointSensitivityBuilderXL
 com.exceljava.strataexcel.generated.market.sensitivity.PointSensitivityXL
-com.exceljava.strataexcel.generated.pricer.curve.CurveCalibratorXL
+com.exceljava.strataexcel.generated.pricer.curve.RatesCurveCalibratorXL
 com.exceljava.strataexcel.generated.pricer.rate.ImmutableRatesProviderXL
 com.exceljava.strataexcel.generated.pricer.rate.RatesProviderXL
 com.exceljava.strataexcel.generated.pricer.swap.DiscountingSwapProductPricerXL

@@ -14,22 +14,22 @@ import com.exceljava.jinx.ExcelArguments;
 import com.exceljava.jinx.ExcelFunction;
 import com.opengamma.strata.basics.currency.Currency;
 import com.opengamma.strata.basics.index.Index;
-import com.opengamma.strata.market.curve.CurveGroupEntry;
 import com.opengamma.strata.market.curve.CurveName;
+import com.opengamma.strata.market.curve.RatesCurveGroupEntry;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
     
 
-public class CurveGroupEntryXL {
+public class RatesCurveGroupEntryXL {
     private final ExcelAddIn xl;
 
-    public CurveGroupEntryXL(ExcelAddIn xl) {
+    public RatesCurveGroupEntryXL(ExcelAddIn xl) {
         this.xl = xl;
     }
     
     @ExcelFunction(
-        value = "og.CurveGroupEntry.of",
+        value = "og.RatesCurveGroupEntry.of",
         category = "Strata",
         isThreadSafe = true
     )
@@ -38,8 +38,8 @@ public class CurveGroupEntryXL {
         @ExcelArgument("discountCurrencies"),
         @ExcelArgument("indices")
     })
-    public CurveGroupEntry of(CurveName curveName, Currency[] discountCurrencies, Index[] indices) {
-        CurveGroupEntry.Builder builder = CurveGroupEntry.builder();
+    public RatesCurveGroupEntry of(CurveName curveName, Currency[] discountCurrencies, Index[] indices) {
+        RatesCurveGroupEntry.Builder builder = RatesCurveGroupEntry.builder();
         builder.curveName(curveName);
         if (null != discountCurrencies) {
             Set<Currency> ccys = new HashSet<Currency>(Arrays.asList(discountCurrencies));

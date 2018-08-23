@@ -17,6 +17,7 @@ import com.opengamma.strata.basics.currency.CurrencyAmount;
 import com.opengamma.strata.product.fx.FxSingle;
 import com.opengamma.strata.product.fx.ResolvedFxSingle;
 import java.time.LocalDate;
+import org.joda.beans.ser.SerDeserializer;
     
 
 public class FxSingleXL {
@@ -24,6 +25,15 @@ public class FxSingleXL {
 
     public FxSingleXL(ExcelAddIn xl) {
         this.xl = xl;
+    }
+    
+    @ExcelFunction(
+        value = "og.FxSingle.DESERIALIZER",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public SerDeserializer DESERIALIZER() {
+        return FxSingle.DESERIALIZER;
     }
     
     @ExcelFunction(

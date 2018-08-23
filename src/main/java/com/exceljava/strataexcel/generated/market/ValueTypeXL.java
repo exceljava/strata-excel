@@ -114,6 +114,15 @@ public class ValueTypeXL {
     }
     
     @ExcelFunction(
+        value = "og.ValueType.RISK_REVERSAL",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public ValueType RISK_REVERSAL() {
+        return ValueType.RISK_REVERSAL;
+    }
+    
+    @ExcelFunction(
         value = "og.ValueType.SABR_ALPHA",
         category = "Strata",
         isThreadSafe = true
@@ -156,6 +165,15 @@ public class ValueTypeXL {
     )
     public ValueType SIMPLE_MONEYNESS() {
         return ValueType.SIMPLE_MONEYNESS;
+    }
+    
+    @ExcelFunction(
+        value = "og.ValueType.STRANGLE",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public ValueType STRANGLE() {
+        return ValueType.STRANGLE;
     }
     
     @ExcelFunction(
@@ -263,6 +281,12 @@ public class ValueTypeXL {
         }
         if (fieldName.equals("SABR_NU")) {
             return ValueType.SABR_NU;
+        }
+        if (fieldName.equals("RISK_REVERSAL")) {
+            return ValueType.RISK_REVERSAL;
+        }
+        if (fieldName.equals("STRANGLE")) {
+            return ValueType.STRANGLE;
         }
         throw new IllegalArgumentException(String.format("%s is invalid", fieldName));
     }

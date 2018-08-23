@@ -2,25 +2,25 @@
 com.opengamma.strata.market.curve.CurveName:
   - of
 
-com.opengamma.strata.market.curve.CurveGroupDefinition:
+com.opengamma.strata.market.curve.RatesCurveGroupDefinition:
   - build
   - of:
-      signature: "CurveGroupDefinition of(CurveGroupName, Collection<CurveGroupEntry>, Collection<CurveDefinition>)"
+      signature: "RatesCurveGroupDefinition of(CurveGroupName, Collection<RatesCurveGroupEntry>, Collection<CurveDefinition>)"
 
-com.opengamma.strata.market.curve.CurveGroupDefinitionBuilder:
+com.opengamma.strata.market.curve.RatesCurveGroupDefinitionBuilder:
 
 com.opengamma.strata.market.curve.CurveGroupName:
   - of
 
-com.opengamma.strata.market.curve.CurveGroupEntry:
+com.opengamma.strata.market.curve.RatesCurveGroupEntry:
   - of:
       imports:
         - java.util.Arrays
         - java.util.Set
         - java.util.HashSet
       wrapper: |
-                  CurveGroupEntry of(CurveName curveName, Currency[] discountCurrencies, Index[] indices) {
-                      CurveGroupEntry.Builder builder = CurveGroupEntry.builder();
+                  RatesCurveGroupEntry of(CurveName curveName, Currency[] discountCurrencies, Index[] indices) {
+                      RatesCurveGroupEntry.Builder builder = RatesCurveGroupEntry.builder();
                       builder.curveName(curveName);
                       if (null != discountCurrencies) {
                           Set<Currency> ccys = new HashSet<Currency>(Arrays.asList(discountCurrencies));
