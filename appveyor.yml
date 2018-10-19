@@ -1,5 +1,6 @@
 version: '{build}'
 os: Windows Server 2012
+
 install:
   - ps: |
       Add-Type -AssemblyName System.IO.Compression.FileSystem
@@ -13,10 +14,27 @@ install:
   - cmd: SET PATH=C:\maven\apache-maven-3.2.5\bin;%JAVA_HOME%\bin;%PATH%
   - cmd: SET MAVEN_OPTS=-XX:MaxPermSize=2g -Xmx4g
   - cmd: SET JAVA_OPTS=-XX:MaxPermSize=2g -Xmx4g
+
 build_script:
   - mvn clean package --batch-mode -DskipTest
+
 test_script:
   - mvn clean install --batch-mode
+
+after_build:
+  - cmd: RMDIR /s /q artifacts\strata-excel
+  - cmd: MKDIR artifacts\strata-excel
+  - cmd: COPY target\*.jar artifacts\strata-excel
+  - cmd: COPY target\lib artifacts\strata-excel\lib
+  - cmd: COPY examples\*.xlsx artifacts\strata-excel
+  - cmd: CD /D artifacts && 7z a strata-excel.zip .\strata-excel
+  
+artifacts:
+  - path: artifacts/strata-excel.zip
+    name: strata-excel
+	type: zip
+
 cache:
   - C:\maven\
   - C:\Users\appveyor\.m2
+  
