@@ -1,4 +1,4 @@
-[![GitHub Release](https://github-basic-badges.herokuapp.com/release/kennedyoliveira/github-basic-badges.svg)]()
+[![GitHub Release](https://img.shields.io/github/release/exceljava/strata-excel.svg)]()
 [![Build status](https://ci.appveyor.com/api/projects/status/k8dul9mkbyjura1a?svg=true)](https://ci.appveyor.com/project/TonyRoberts/strata-excel)
 
 # Strata-Excel
