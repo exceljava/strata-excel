@@ -32,7 +32,7 @@ after_build:
 artifacts:
   - path: artifacts/strata-excel.zip
     name: strata-excel
-	type: zip
+    type: zip
 
 cache:
   - C:\maven\
