@@ -21,6 +21,8 @@ classpath =
   <strata and dependencies>/*.jar
 ```
 
+Pre-built jar files can be downloaded from https://github.com/exceljava/strata-excel/releases  if you do not want to build the project.
+
 ## Building Strata-Excel
 
 The source code can be cloned using git from GitHub:
