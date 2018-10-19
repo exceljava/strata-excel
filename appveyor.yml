@@ -27,9 +27,9 @@ after_build:
   - cmd: COPY target\*.jar artifacts\strata-excel
   - cmd: COPY target\lib artifacts\strata-excel\lib
   - cmd: COPY examples\*.xlsx artifacts\strata-excel
-  - cmd: PUSHD artifacts
+  - cmd: CD /D artifacts
   - cmd: 7z a strata-excel.zip .\strata-excel
-  - cmd: POPD
+  - cmd: CD /D ..
 
 artifacts:
   - path: artifacts/strata-excel.zip
