@@ -23,13 +23,13 @@ test_script:
 
 after_build:
   - cmd: IF EXIST artifacts RMDIR /s /q artifacts
-  - cmd: MKDIR artifacts\strata-excel
+  - cmd: MKDIR artifacts\strata-excel\lib
+  - cmd: COPY README.md artifacts\strata-excel
   - cmd: COPY target\*.jar artifacts\strata-excel
-  - cmd: COPY target\lib artifacts\strata-excel\lib
-  - cmd: COPY examples\*.xlsx artifacts\strata-excel
-  - cmd: CD /D artifacts
-  - cmd: 7z a strata-excel.zip .\strata-excel
-  - cmd: CD /D ..
+  - cmd: COPY target\lib\*.jar artifacts\strata-excel\lib\
+  - cmd: MKDIR artifacts\strata-excel\examples
+  - cmd: COPY examples\*.xlsx artifacts\strata-excel\examples\
+  - cmd: 7z a artifacts\strata-excel.zip ".\artifacts\strata-excel\*"
 
 artifacts:
   - path: artifacts/strata-excel.zip
