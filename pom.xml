@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.exceljava</groupId>
   <artifactId>strata-excel</artifactId>
-  <version>SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>Strata-Excel</name>
   <description>Excel bindings for Strata</description>
@@ -34,7 +34,7 @@
           <target>1.8</target>
         </configuration>
       </plugin>
-	  
+
       <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
@@ -69,24 +69,7 @@
           <injectAllReactorProjects>true</injectAllReactorProjects>
         </configuration>
       </plugin>
-	  
-      <plugin>
-        <artifactId>maven-install-plugin</artifactId>
-        <version>2.4</version>
-        <executions>
-          <execution>
-            <id>default-install</id>
-            <phase>install</phase>
-            <goals>
-              <goal>install</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
-	  
+
       <plugin>
         <artifactId>maven-install-plugin</artifactId>
         <version>2.4</version>
@@ -100,7 +83,7 @@
           </execution>
         </executions>
         <configuration>
-          <file>${project.basedir}/target/${artifactId}-${version.number}.${project.packaging}</file>
+          <file>${project.basedir}/target/${project.artifactId}-${version.number}.${project.packaging}</file>
           <groupId>${project.groupId}</groupId>
           <artifactId>${project.artifactId}</artifactId>
           <version>${version.number}</version>
@@ -113,8 +96,10 @@
   <!-- ==================================================================== -->
   <properties>
     <version.number>${git.commit.id.describe-short}</version.number>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
-  
+
   <!-- ==================================================================== -->
   <dependencies>
     <!-- Jinx -->
