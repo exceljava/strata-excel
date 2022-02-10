@@ -106,6 +106,15 @@ public class CurrencyXL {
     }
     
     @ExcelFunction(
+        value = "og.Currency.CNH",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Currency CNH() {
+        return Currency.CNH;
+    }
+    
+    @ExcelFunction(
         value = "og.Currency.CNY",
         category = "Strata",
         isThreadSafe = true
@@ -250,6 +259,24 @@ public class CurrencyXL {
     }
     
     @ExcelFunction(
+        value = "og.Currency.KZT",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Currency KZT() {
+        return Currency.KZT;
+    }
+    
+    @ExcelFunction(
+        value = "og.Currency.MAD",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Currency MAD() {
+        return Currency.MAD;
+    }
+    
+    @ExcelFunction(
         value = "og.Currency.MXN",
         category = "Strata",
         isThreadSafe = true
@@ -286,6 +313,15 @@ public class CurrencyXL {
     }
     
     @ExcelFunction(
+        value = "og.Currency.OMR",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Currency OMR() {
+        return Currency.OMR;
+    }
+    
+    @ExcelFunction(
         value = "og.Currency.PEN",
         category = "Strata",
         isThreadSafe = true
@@ -319,6 +355,15 @@ public class CurrencyXL {
     )
     public Currency PLN() {
         return Currency.PLN;
+    }
+    
+    @ExcelFunction(
+        value = "og.Currency.QAR",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Currency QAR() {
+        return Currency.QAR;
     }
     
     @ExcelFunction(
@@ -409,6 +454,15 @@ public class CurrencyXL {
     )
     public Currency USD() {
         return Currency.USD;
+    }
+    
+    @ExcelFunction(
+        value = "og.Currency.VND",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public Currency VND() {
+        return Currency.VND;
     }
     
     @ExcelFunction(

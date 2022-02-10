@@ -24,6 +24,24 @@ public class FieldNameXL {
     }
     
     @ExcelFunction(
+        value = "og.FieldName.CLEAN_PRICE",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public FieldName CLEAN_PRICE() {
+        return FieldName.CLEAN_PRICE;
+    }
+    
+    @ExcelFunction(
+        value = "og.FieldName.DIRTY_PRICE",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public FieldName DIRTY_PRICE() {
+        return FieldName.DIRTY_PRICE;
+    }
+    
+    @ExcelFunction(
         value = "og.FieldName.MARKET_VALUE",
         category = "Strata",
         isThreadSafe = true
@@ -39,6 +57,15 @@ public class FieldNameXL {
     )
     public FieldName SETTLEMENT_PRICE() {
         return FieldName.SETTLEMENT_PRICE;
+    }
+    
+    @ExcelFunction(
+        value = "og.FieldName.VOLATILITY",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public FieldName VOLATILITY() {
+        return FieldName.VOLATILITY;
     }
     
     @ExcelArgumentConverter

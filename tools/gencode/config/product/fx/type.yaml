@@ -1,6 +1,7 @@
 
 com.opengamma.strata.product.fx.type.FxSwapConvention:
-  - of
+  - of:
+      signature: "FxSwapConvention of(String)"
 
 com.opengamma.strata.product.fx.type.FxSwapTemplate:
   - build
