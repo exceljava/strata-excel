@@ -86,16 +86,16 @@ def main():
             _log.info(f"Writing output {path}")
             fh.write(wrapper)
 
-    if resources_path:
-        # get all the classes, not just the auto-generated ones
-        xl_wrappers = set()
-        for dirpath, dirnames, filenames in os.walk(output_path):
-            for filename in filenames:
-                name, ext = os.path.splitext(filename)
-                if ext == ".java":
-                    package = os.path.relpath(dirpath, output_path).replace(os.path.sep, ".")
-                    xl_wrappers.add(package + "." + name)
+    # get all the classes, not just the auto-generated ones
+    xl_wrappers = set()
+    for dirpath, dirnames, filenames in os.walk(output_path):
+        for filename in filenames:
+            name, ext = os.path.splitext(filename)
+            if ext == ".java":
+                package = os.path.relpath(dirpath, output_path).replace(os.path.sep, ".")
+                xl_wrappers.add(package + "." + name)
 
+    if resources_path:
         with open(os.path.join(resources_path, "jinx-classes.txt"), "wt") as fh:
             print("# Strata-Excel classes", file=fh)
             for cls in sorted(xl_wrappers):
