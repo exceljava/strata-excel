@@ -33,12 +33,30 @@ public class ValueTypeXL {
     }
     
     @ExcelFunction(
+        value = "og.ValueType.CORRELATION",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public ValueType CORRELATION() {
+        return ValueType.CORRELATION;
+    }
+    
+    @ExcelFunction(
         value = "og.ValueType.DISCOUNT_FACTOR",
         category = "Strata",
         isThreadSafe = true
     )
     public ValueType DISCOUNT_FACTOR() {
         return ValueType.DISCOUNT_FACTOR;
+    }
+    
+    @ExcelFunction(
+        value = "og.ValueType.DIVIDEND_YIELD",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public ValueType DIVIDEND_YIELD() {
+        return ValueType.DIVIDEND_YIELD;
     }
     
     @ExcelFunction(
@@ -159,6 +177,15 @@ public class ValueTypeXL {
     }
     
     @ExcelFunction(
+        value = "og.ValueType.SABR_SHIFT",
+        category = "Strata",
+        isThreadSafe = true
+    )
+    public ValueType SABR_SHIFT() {
+        return ValueType.SABR_SHIFT;
+    }
+    
+    @ExcelFunction(
         value = "og.ValueType.SIMPLE_MONEYNESS",
         category = "Strata",
         isThreadSafe = true
@@ -243,6 +270,9 @@ public class ValueTypeXL {
         if (fieldName.equals("DISCOUNT_FACTOR")) {
             return ValueType.DISCOUNT_FACTOR;
         }
+        if (fieldName.equals("DIVIDEND_YIELD")) {
+            return ValueType.DIVIDEND_YIELD;
+        }
         if (fieldName.equals("PRICE_INDEX")) {
             return ValueType.PRICE_INDEX;
         }
@@ -282,11 +312,17 @@ public class ValueTypeXL {
         if (fieldName.equals("SABR_NU")) {
             return ValueType.SABR_NU;
         }
+        if (fieldName.equals("SABR_SHIFT")) {
+            return ValueType.SABR_SHIFT;
+        }
         if (fieldName.equals("RISK_REVERSAL")) {
             return ValueType.RISK_REVERSAL;
         }
         if (fieldName.equals("STRANGLE")) {
             return ValueType.STRANGLE;
+        }
+        if (fieldName.equals("CORRELATION")) {
+            return ValueType.CORRELATION;
         }
         throw new IllegalArgumentException(String.format("%s is invalid", fieldName));
     }
