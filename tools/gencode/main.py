@@ -31,7 +31,7 @@ def _load_config():
     for dirpath, dirname, filenames in os.walk(path):
         for filename in fnmatch.filter(filenames, "*.yaml"):
             with open(os.path.join(dirpath, filename)) as fh:
-                config.update(yaml.load(fh) or {})
+                config.update(yaml.safe_load(fh) or {})
     return config
 
 
