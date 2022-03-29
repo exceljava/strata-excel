@@ -8,7 +8,7 @@ class MethodBuilderBase(ABC):
         self.cls = cls
         self.method = method
         self.xlname = xlname
-        self.__imports = set()
+        self.__imports = set(cls.imports)
 
     @property
     def category(self):
