@@ -19,5 +19,9 @@ com.opengamma.strata.basics.index.Index:
 com.opengamma.strata.basics.index.OvernightIndex:
   - of
 
+com.opengamma.strata.basics.index.OvernightIndices:
+
+com.opengamma.strata.basics.index.IborIndices:
+
 com.opengamma.strata.basics.index.PriceIndex:
   - of

@@ -16,8 +16,10 @@ com.exceljava.strataexcel.generated.basics.date.TenorXL
 com.exceljava.strataexcel.generated.basics.index.FloatingRateIndexXL
 com.exceljava.strataexcel.generated.basics.index.FxIndexXL
 com.exceljava.strataexcel.generated.basics.index.IborIndexXL
+com.exceljava.strataexcel.generated.basics.index.IborIndicesXL
 com.exceljava.strataexcel.generated.basics.index.IndexXL
 com.exceljava.strataexcel.generated.basics.index.OvernightIndexXL
+com.exceljava.strataexcel.generated.basics.index.OvernightIndicesXL
 com.exceljava.strataexcel.generated.basics.index.PriceIndexXL
 com.exceljava.strataexcel.generated.basics.schedule.FrequencyXL
 com.exceljava.strataexcel.generated.basics.schedule.PeriodicScheduleXL
