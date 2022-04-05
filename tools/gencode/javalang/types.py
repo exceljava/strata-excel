@@ -59,10 +59,11 @@ class JavaField:
 
 class JavaType:
 
-    def __init__(self, name, package=None, arguments=None):
+    def __init__(self, name, package=None, arguments=None, dimensions=None):
         self.name = name
         self.package = package
         self.arguments = arguments
+        self.dimensions = dimensions
 
     @property
     def imports(self):
@@ -75,16 +76,24 @@ class JavaType:
         return imports
 
     @property
+    def type(self):
+        return JavaType(self.name, self.package, self.arguments)
+
+    @property
     def signature(self):
         s = self.name
         if self.arguments:
             s += "<" + ", ".join((a.signature for a in self.arguments)) + ">"
+        if self.dimensions:
+            s += "[]" * len(self.dimensions)
         return s
 
     def __str__(self):
         s = (self.package + "." if self.package else "") + self.name
         if self.arguments:
             s += "<" + ", ".join(map(str, self.arguments)) + ">"
+        if self.dimensions:
+            s += "[]" * len(self.dimensions)
         return s
 
     def __eq__(self, other):
@@ -111,10 +120,6 @@ class JavaClass(JavaType):
         for m in methods:
             self.methods.setdefault(m.name, []).append(m)
         self.fields = list(fields)
-
-    @property
-    def type(self):
-        return JavaType(self.name, self.package, self.arguments)
 
     def __str__(self):
         methods = chain(*[v for k, v in sorted(self.methods.items())])

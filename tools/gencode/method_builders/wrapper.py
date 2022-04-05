@@ -40,7 +40,7 @@ class WrapperMethodBuilder(MethodBuilderBase):
 
         for ptype in [t for n, t in method.parameters] + [method.return_type]:
             if ptype.package and ptype.package.startswith("com.opengamma.strata"):
-                if str(ptype) not in all_classes:
+                if str(ptype.type) not in all_classes:
                     raise Exception(f"Class '{ptype}' hasn't been loaded (used by {self.cls.name}).")
 
         params, pnames, transforms = self.prepare_parameters(method.parameters)

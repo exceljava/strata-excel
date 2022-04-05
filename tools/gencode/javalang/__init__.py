@@ -90,8 +90,10 @@ def _get_class_info(source_path, class_text):
         if arguments:
             arguments = [_get_type(x.type) for x in arguments]
 
+        dimensions = getattr(t, "dimensions", None)
+
         if t.name in standard_types or isinstance(t, javalang.tree.BasicType):
-            return JavaType(t.name, arguments=arguments)
+            return JavaType(t.name, arguments=arguments, dimensions=dimensions)
 
         name = t.name
         sub_type = getattr(t, "sub_type", None)
@@ -111,7 +113,7 @@ def _get_class_info(source_path, class_text):
         if pkg is None:
             pkg = package  # if it wasn't in the imports it must be in the same package
 
-        return JavaType(name, pkg, arguments)
+        return JavaType(name, pkg, arguments=arguments, dimensions=dimensions)
 
     prev_depth = -1
     class_name_stack = []
