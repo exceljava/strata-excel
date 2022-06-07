@@ -5,6 +5,17 @@ source files
 from itertools import chain
 from collections import OrderedDict
 
+_primitive_types = {
+    "byte": "Byte",
+    "short": "Short",
+    "int": "Integer",
+    "long": "Long",
+    "float": "Float",
+    "double": "Double",
+    "boolean": "Boolean",
+    "char": "Char"
+}
+
 
 class JavaMethod:
     """
@@ -87,6 +98,19 @@ class JavaType:
         if self.dimensions:
             s += "[]" * len(self.dimensions)
         return s
+
+    @property
+    def is_primitive(self):
+        return self.name in _primitive_types
+
+    @property
+    def boxed_type(self):
+        if not self.is_primitive:
+            raise ValueError("'%s' is not a primitive type" % self.signature)
+        return JavaType(_primitive_types[self.name],
+                        package=self.package,
+                        arguments=self.arguments,
+                        dimensions=self.dimensions)
 
     def __str__(self):
         s = (self.package + "." if self.package else "") + self.name

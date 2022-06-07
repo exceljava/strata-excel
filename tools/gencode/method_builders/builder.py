@@ -66,6 +66,8 @@ class BuilderMethodBuilder(MethodBuilderBase):
                     else:
                         # add the option value to the builder if it hasn't already
                         # been added (collection arguments take precedence)
+                        if ptype.is_primitive:
+                            ptype = ptype.boxed_type
                         builder_fragments.setdefault(pname, f"""
         Object {pname} = args.get("{pname.lower()}");
         if (null != {pname}) {{
