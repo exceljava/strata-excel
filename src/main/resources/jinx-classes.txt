@@ -29,6 +29,7 @@ com.exceljava.strataexcel.generated.basics.value.ValueAdjustmentXL
 com.exceljava.strataexcel.generated.basics.value.ValueScheduleXL
 com.exceljava.strataexcel.generated.basics.value.ValueStepSequenceXL
 com.exceljava.strataexcel.generated.basics.value.ValueStepXL
+com.exceljava.strataexcel.generated.collect.array.DoubleArrayXL
 com.exceljava.strataexcel.generated.collect.timeseries.LocalDateDoubleTimeSeriesXL
 com.exceljava.strataexcel.generated.data.FieldNameXL
 com.exceljava.strataexcel.generated.data.FxMatrixIdXL

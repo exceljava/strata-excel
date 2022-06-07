@@ -91,11 +91,11 @@ public class NotionalScheduleXL {
         
         Object initialExchange = args.get("initialexchange");
         if (null != initialExchange) {
-            boolean value;
+            Boolean value;
             try {
-                value = xl.convertArgument(initialExchange, boolean.class);
+                value = xl.convertArgument(initialExchange, Boolean.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("initialExchange could not be converted to boolean", e);
+                throw new IllegalArgumentException("initialExchange could not be converted to Boolean", e);
             }
             builder = builder.initialExchange(value);
             usedArgs.add("initialexchange");
@@ -103,11 +103,11 @@ public class NotionalScheduleXL {
         
         Object intermediateExchange = args.get("intermediateexchange");
         if (null != intermediateExchange) {
-            boolean value;
+            Boolean value;
             try {
-                value = xl.convertArgument(intermediateExchange, boolean.class);
+                value = xl.convertArgument(intermediateExchange, Boolean.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("intermediateExchange could not be converted to boolean", e);
+                throw new IllegalArgumentException("intermediateExchange could not be converted to Boolean", e);
             }
             builder = builder.intermediateExchange(value);
             usedArgs.add("intermediateexchange");
@@ -115,11 +115,11 @@ public class NotionalScheduleXL {
         
         Object finalExchange = args.get("finalexchange");
         if (null != finalExchange) {
-            boolean value;
+            Boolean value;
             try {
-                value = xl.convertArgument(finalExchange, boolean.class);
+                value = xl.convertArgument(finalExchange, Boolean.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("finalExchange could not be converted to boolean", e);
+                throw new IllegalArgumentException("finalExchange could not be converted to Boolean", e);
             }
             builder = builder.finalExchange(value);
             usedArgs.add("finalexchange");

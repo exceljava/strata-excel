@@ -70,11 +70,11 @@ public class RatesCurveGroupDefinitionXL {
         
         Object computeJacobian = args.get("computejacobian");
         if (null != computeJacobian) {
-            boolean value;
+            Boolean value;
             try {
-                value = xl.convertArgument(computeJacobian, boolean.class);
+                value = xl.convertArgument(computeJacobian, Boolean.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("computeJacobian could not be converted to boolean", e);
+                throw new IllegalArgumentException("computeJacobian could not be converted to Boolean", e);
             }
             builder = builder.computeJacobian(value);
             usedArgs.add("computejacobian");
@@ -82,11 +82,11 @@ public class RatesCurveGroupDefinitionXL {
         
         Object computePvSensitivityToMarketQuote = args.get("computepvsensitivitytomarketquote");
         if (null != computePvSensitivityToMarketQuote) {
-            boolean value;
+            Boolean value;
             try {
-                value = xl.convertArgument(computePvSensitivityToMarketQuote, boolean.class);
+                value = xl.convertArgument(computePvSensitivityToMarketQuote, Boolean.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("computePvSensitivityToMarketQuote could not be converted to boolean", e);
+                throw new IllegalArgumentException("computePvSensitivityToMarketQuote could not be converted to Boolean", e);
             }
             builder = builder.computePvSensitivityToMarketQuote(value);
             usedArgs.add("computepvsensitivitytomarketquote");

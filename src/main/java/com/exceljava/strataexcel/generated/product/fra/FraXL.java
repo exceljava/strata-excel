@@ -87,11 +87,11 @@ public class FraXL {
         
         Object notional = args.get("notional");
         if (null != notional) {
-            double value;
+            Double value;
             try {
-                value = xl.convertArgument(notional, double.class);
+                value = xl.convertArgument(notional, Double.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("notional could not be converted to double", e);
+                throw new IllegalArgumentException("notional could not be converted to Double", e);
             }
             builder = builder.notional(value);
             usedArgs.add("notional");
@@ -147,11 +147,11 @@ public class FraXL {
         
         Object fixedRate = args.get("fixedrate");
         if (null != fixedRate) {
-            double value;
+            Double value;
             try {
-                value = xl.convertArgument(fixedRate, double.class);
+                value = xl.convertArgument(fixedRate, Double.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("fixedRate could not be converted to double", e);
+                throw new IllegalArgumentException("fixedRate could not be converted to Double", e);
             }
             builder = builder.fixedRate(value);
             usedArgs.add("fixedrate");

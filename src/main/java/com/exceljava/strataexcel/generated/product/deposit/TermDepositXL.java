@@ -83,11 +83,11 @@ public class TermDepositXL {
         
         Object notional = args.get("notional");
         if (null != notional) {
-            double value;
+            Double value;
             try {
-                value = xl.convertArgument(notional, double.class);
+                value = xl.convertArgument(notional, Double.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("notional could not be converted to double", e);
+                throw new IllegalArgumentException("notional could not be converted to Double", e);
             }
             builder = builder.notional(value);
             usedArgs.add("notional");
@@ -143,11 +143,11 @@ public class TermDepositXL {
         
         Object rate = args.get("rate");
         if (null != rate) {
-            double value;
+            Double value;
             try {
-                value = xl.convertArgument(rate, double.class);
+                value = xl.convertArgument(rate, Double.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("rate could not be converted to double", e);
+                throw new IllegalArgumentException("rate could not be converted to Double", e);
             }
             builder = builder.rate(value);
             usedArgs.add("rate");

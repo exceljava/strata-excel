@@ -93,11 +93,11 @@ public class InflationRateSwapLegConventionXL {
         
         Object notionalExchange = args.get("notionalexchange");
         if (null != notionalExchange) {
-            boolean value;
+            Boolean value;
             try {
-                value = xl.convertArgument(notionalExchange, boolean.class);
+                value = xl.convertArgument(notionalExchange, Boolean.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("notionalExchange could not be converted to boolean", e);
+                throw new IllegalArgumentException("notionalExchange could not be converted to Boolean", e);
             }
             builder = builder.notionalExchange(value);
             usedArgs.add("notionalexchange");

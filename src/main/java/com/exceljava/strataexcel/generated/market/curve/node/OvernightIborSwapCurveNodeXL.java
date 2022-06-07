@@ -80,11 +80,11 @@ public class OvernightIborSwapCurveNodeXL {
         
         Object additionalSpread = args.get("additionalspread");
         if (null != additionalSpread) {
-            double value;
+            Double value;
             try {
-                value = xl.convertArgument(additionalSpread, double.class);
+                value = xl.convertArgument(additionalSpread, Double.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("additionalSpread could not be converted to double", e);
+                throw new IllegalArgumentException("additionalSpread could not be converted to Double", e);
             }
             builder = builder.additionalSpread(value);
             usedArgs.add("additionalspread");

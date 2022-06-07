@@ -113,19 +113,19 @@
     <dependency>
       <groupId>com.opengamma.strata</groupId>
       <artifactId>strata-measure</artifactId>
-      <version>2.11.5</version>
+      <version>2.12.3</version>
     </dependency>
 	
     <dependency>
       <groupId>com.opengamma.strata</groupId>
       <artifactId>strata-report</artifactId>
-      <version>2.11.5</version>
+      <version>2.12.3</version>
     </dependency>
 	
     <dependency>
       <groupId>com.opengamma.strata</groupId>
       <artifactId>strata-loader</artifactId>
-      <version>2.11.5</version>
+      <version>2.12.3</version>
     </dependency>
   </dependencies>
 </project>

@@ -64,11 +64,11 @@ public class DaysAdjustmentXL {
         
         Object days = args.get("days");
         if (null != days) {
-            int value;
+            Integer value;
             try {
-                value = xl.convertArgument(days, int.class);
+                value = xl.convertArgument(days, Integer.class);
             } catch (Exception e) {
-                throw new IllegalArgumentException("days could not be converted to int", e);
+                throw new IllegalArgumentException("days could not be converted to Integer", e);
             }
             builder = builder.days(value);
             usedArgs.add("days");
